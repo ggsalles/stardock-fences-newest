@@ -105,8 +105,8 @@ namespace WEDLC.Forms
 
             // Ajustando o tamanho das colunas
             grdDados.Columns[0].Width = 80; //ID
-            grdDados.Columns[1].Width = 80; //Sigla
-            grdDados.Columns[2].Width = 350; //Nome
+            grdDados.Columns[1].Width = 150; //Sigla
+            grdDados.Columns[2].Width = 400; //Nome
 
             // Desabilita a edição da coluna
             grdDados.Columns[0].ReadOnly = true;

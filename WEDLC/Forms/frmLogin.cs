@@ -111,7 +111,7 @@ namespace WEDLC.Forms
                 }
 
                 // Se encontrou e for troca de senha...
-                if (dtAux.Rows.Count == 1 && dtAux.Rows[0]["nome"].ToString() == txtUsuario.Text.ToString() && dtAux.Rows[0]["trocasenha"].ToString() == "1")
+                if (dtAux.Rows[0]["nome"].ToString() == txtUsuario.Text.ToString() && dtAux.Rows[0]["trocasenha"].ToString() == "1")
                 {
                     // Retorna o cursor para "padrão"
                     Cursor.Current = Cursors.Default;
