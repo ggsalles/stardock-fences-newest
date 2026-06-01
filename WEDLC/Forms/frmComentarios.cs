@@ -326,21 +326,21 @@ namespace WEDLC.Forms
                     }
                     else if (cAcao == Acao.DELETE)
                     {
-                        //objMusculo.IdMusculo = int.Parse(txtCodigo.Text);
+                        objComentario.IdComentario = int.Parse(txtCodigo.Text);
 
-                        ////Solicita a confirmação do usuário para alteração
-                        //if (MessageBox.Show("Tem certeza que deseja excluir este dado?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        //{
-                        //    if (objMusculo.excluiMusculo() == true)
-                        //    {
-                        //        MessageBox.Show("Exclusão efetuada com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //    }
-                        //    else
-                        //    {
-                        //        MessageBox.Show("Erro ao tentar atualilzar!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //        return;
-                        //    }
-                        //}
+                        //Solicita a confirmação do usuário para alteração
+                        if (MessageBox.Show("Tem certeza que deseja excluir este dado?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            if (objComentario.excluiComentario() == true)
+                            {
+                                MessageBox.Show("Exclusão efetuada com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Erro ao tentar atualilzar!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
                     }
                     //Chama o evento cancelar
                     btnCancelar_Click(sender, e);
@@ -420,17 +420,17 @@ namespace WEDLC.Forms
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             //valida codigo para exclusão
-            //if (txtCodigo.Text.Length == 0 || txtSigla.Text.Length == 0 || txtNome.Text.Length == 0)
-            //{
-            //    MessageBox.Show("Não existe nenhum item selecionado para exclusão!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
+            if (txtCodigo.Text.Length == 0 || txtSigla.Text.Length == 0 || txtNome.Text.Length == 0)
+            {
+                MessageBox.Show("Não existe nenhum item selecionado para exclusão!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            ////Determina a acao
-            //cAcao = Acao.DELETE;
+            //Determina a acao
+            cAcao = Acao.DELETE;
 
-            ////Chama o gravra
-            //btnGravar_Click(sender, e);
+            //Chama o gravra
+            btnGravar_Click(sender, e);
         }
 
         private void btnSair_Click(object sender, EventArgs e)

@@ -157,5 +157,44 @@ namespace WEDLC.Banco
                 return false;
             }
         }
+
+        public bool excluiComentario()
+        {
+            // Essa exclusão é lógica, então o ID do comentário deve ser válido para marcar como excluído
+            // Validação de entrada
+            if (IdComentario <= 0)
+            {
+                MessageBox.Show("ID de comentário inválido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            try
+            {
+                if (!conectaBanco())
+                {
+                    MessageBox.Show("Erro ao conectar ao banco de dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                using (var command = new MySqlCommand())
+                {
+                    command.Connection = conexao;
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.CommandText = "pr_excluicomentario";
+
+                    command.Parameters.AddWithValue("pIdComentario", IdComentario);
+
+                    bool sucesso = command.ExecuteNonQuery() > 0;
+                    conexao.Close();
+                    return sucesso;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao excluir: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conexao?.Close();
+                return false;
+            }
+        }
     }
 }
