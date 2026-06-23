@@ -204,6 +204,7 @@
     <Compile Include="Banco\cSequence.cs" />
     <Compile Include="Banco\cSimNao.cs" />
     <Compile Include="Banco\FormZoomHelper.cs" />
+    <Compile Include="Banco\InputBoxClass.cs" />
     <Compile Include="Banco\Sessao.cs" />
     <Compile Include="DataSetsReport\dsAvaliacaoMuscular.cs">
       <DependentUpon>dsAvaliacaoMuscular.xsd</DependentUpon>
@@ -434,6 +435,12 @@
     </Compile>
     <Compile Include="Forms\frmTrocaSenha.Designer.cs">
       <DependentUpon>frmTrocaSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBoxForm.Designer.cs">
+      <DependentUpon>InputBoxForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\testecep.cs">
       <SubType>Form</SubType>
@@ -713,6 +720,7 @@
     <None Include="Imagens\edit.png" />
     <None Include="Imagens\down.png" />
     <None Include="Imagens\delete.png" />
+    <None Include="Imagens\copiarcolar.png" />
     <Content Include="Imagens\exit.png" />
     <Content Include="Imagens\ok.png" />
     <Content Include="Imagens\save.png" />

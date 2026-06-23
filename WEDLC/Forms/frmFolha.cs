@@ -106,6 +106,7 @@ namespace WEDLC.Forms
                 btnGravar.Enabled = true;
                 btnCancelar.Enabled = true;
                 btnExcluir.Enabled = false;
+                btnCopiarColar.Enabled = false;
             }
 
             //Se clicou em gravar, cancelar ou complemento...
@@ -115,6 +116,7 @@ namespace WEDLC.Forms
                 btnGravar.Enabled = false;
                 btnCancelar.Enabled = false;
                 btnExcluir.Enabled = false;
+                btnCopiarColar.Enabled = false;
             }
 
             //Se clicou em gravar
@@ -124,6 +126,7 @@ namespace WEDLC.Forms
                 btnGravar.Enabled = true;
                 btnCancelar.Enabled = true;
                 btnExcluir.Enabled = true;
+                btnCopiarColar.Enabled = true;
             }
         }
         private void configuraGridDados()
@@ -399,18 +402,18 @@ namespace WEDLC.Forms
                         objFolha.IdFolha = int.Parse(txtCodigo.Text);
 
                         ////Solicita a confirmação do usuário para alteração
-                        //if (MessageBox.Show("Tem certeza que deseja excluir este dado?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        //{
-                        //    if (objEspecializacao.excluiEspecializacao() == true)
-                        //    {
-                        //        MessageBox.Show("Exclusão efetuada com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //    }
-                        //    else
-                        //    {
-                        //        MessageBox.Show("Erro ao tentar atualilzar!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        //        return;
-                        //    }
-                        //}
+                        if (MessageBox.Show("Tem certeza que deseja excluir este dado?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            if (objFolha.excluiFolha() == true)
+                            {
+                                MessageBox.Show("Exclusão efetuada com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Erro ao tentar atualilzar!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                        }
                     }
 
                     // GRAVA LOG
@@ -473,6 +476,16 @@ namespace WEDLC.Forms
 
             //Chama o gravra
             btnGravar_Click(sender, e);
+
+            //Chama o cancelar
+            btnCancelar_Click(sender, e);
+
+            // GRAVA LOG
+            clLog objcLog = new clLog();
+            objcLog.IdLogDescricao = 5; // descrição na tabela LOGDESCRICAO 
+            objcLog.IdUsuario = Sessao.IdUsuario;
+            objcLog.Descricao = this.Name;
+            objcLog.incluiLog();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -1621,6 +1634,73 @@ namespace WEDLC.Forms
                 MessageBox.Show("Erro ao tentar atualizar os testes especiais!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void btnCopiarColar_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                //Verifica permissão de gravação
+                if (!cPermissao.PodeGravarModulo(codModulo))
+                {
+                    MessageBox.Show("Você não tem permissão para copiar folha neste módulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // dentro do método:
+                string valor = InputBoxClass.Show("Digite o nome da folha:", "Atenção!");
+
+                if (valor == null)
+                {
+                    // Usuário clicou em Cancelar ou fechou o form
+                    MessageBox.Show("Operação cancelada.");
+                    return; // SAI DA ROTINA
+                }
+
+                // Continua normalmente se OK foi clicado
+                if (validaCampos() == true)
+                {
+                    Int32 ultimoIdFolha = 0; // Inicializa o ID da folha
+                    cFolha objFolha = new cFolha();
+
+                    objFolha.IdFolha = int.Parse(txtCodigo.Text); // Define o ID da folha como 0 para indicar que é uma nova folha  
+                    objFolha.Sigla = txtSigla.Text;
+                    objFolha.Nome = valor;
+                    objFolha.IdTipoFolha = int.Parse(cboTipo.SelectedValue.ToString());
+                    objFolha.IdGrupoFolha = int.Parse(cboGrupo.SelectedValue.ToString());
+
+                    objFolha.copiarFolha(objFolha, out ultimoIdFolha);
+
+                    if (ultimoIdFolha > 0)
+                    {
+                        txtCodigo.Text = ultimoIdFolha.ToString();
+                        txtNome.Text = valor; // Atualiza o nome da folha com o valor digitado pelo usuário                   
+                        grdDados.CurrentCell = null; //Desmarca a seleção do grid
+                        MessageBox.Show("Cópia efetuada com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Falha ao tentar copiar a folha", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao tentar copiar a folha", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                clLog objcLog = new clLog();
+                objcLog.IdLogDescricao = 3; // descrição na tabela LOGDESCRICAO 
+                objcLog.IdUsuario = Sessao.IdUsuario;
+                objcLog.Descricao = this.Name + " - " + ex.Message;
+                objcLog.incluiLog();
+            }
+
         }
     }
 }

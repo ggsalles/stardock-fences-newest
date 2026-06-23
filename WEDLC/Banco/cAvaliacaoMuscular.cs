@@ -50,10 +50,10 @@ namespace WEDLC.Banco
                 MySqlParameter[] pParam = new MySqlParameter[2];
                 MySqlCommand command = new MySqlCommand();
 
-                pParam[0] = new MySqlParameter("pIdFolha", MySqlDbType.VarChar);
+                pParam[0] = new MySqlParameter("pIdFolha", MySqlDbType.Int32);
                 pParam[0].Value = IdFolha;
 
-                pParam[1] = new MySqlParameter("pIdMusculo", MySqlDbType.VarChar);
+                pParam[1] = new MySqlParameter("pIdMusculo", MySqlDbType.Int32);
                 pParam[1].Value = IdMusculo;
 
                 command.Connection = conexao;

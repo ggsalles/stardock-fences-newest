@@ -8,7 +8,7 @@ namespace WEDLC.Banco
     public class cFolha
     {
         public Int32 IdFolha { get; set; }
-        public string Nome{ get; set; }
+        public string Nome { get; set; }
         public string Sigla { get; set; }
         public Int32 IdTipoFolha { get; set; }
         public Int32 IdGrupoFolha { get; set; }
@@ -314,7 +314,7 @@ namespace WEDLC.Banco
             try
             {
                 using (MySqlDataAdapter sqlDa = new MySqlDataAdapter("pr_carregacomboavaliacaomuscular", conexao))
-                
+
                 {
                     sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
                     sqlDa.SelectCommand.Parameters.AddWithValue("pIdFolha", pIdFolha);
@@ -533,7 +533,7 @@ namespace WEDLC.Banco
                     ultimoId = -1;
                     conexao.Close();
                     return true;
-     
+
                 }
             }
 
@@ -581,6 +581,109 @@ namespace WEDLC.Banco
             catch (Exception ex)
             {
                 MessageBox.Show($"Erro ao atualizar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conexao?.Close();
+                return false;
+            }
+        }
+
+        public bool copiarFolha(cFolha pFolha, out Int32 ultimoId)
+        {
+            ultimoId = -1;
+
+            try
+            {
+                if (conectaBanco() == false)
+                {
+                    MessageBox.Show("Erro ao conectar ao banco de dados.", "Erro",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro ao conectar ao banco de dados.", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            try
+            {
+                MySqlCommand command = new MySqlCommand();
+                command.Connection = conexao;
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "pr_copiarfolha";
+
+                // Parâmetros de entrada — na mesma ordem da procedure
+                command.Parameters.Add(new MySqlParameter("pSigla", MySqlDbType.VarChar)
+                { Value = pFolha.Sigla });
+
+                command.Parameters.Add(new MySqlParameter("pNome", MySqlDbType.VarChar)
+                { Value = pFolha.Nome });
+
+                command.Parameters.Add(new MySqlParameter("pIdTipoFolha", MySqlDbType.Int32)
+                { Value = pFolha.IdTipoFolha });
+
+                command.Parameters.Add(new MySqlParameter("pIdGrupoFolha", MySqlDbType.Int32)
+                { Value = pFolha.IdGrupoFolha });
+
+                command.Parameters.Add(new MySqlParameter("pIdFolha", MySqlDbType.Int32)
+                { Value = pFolha.IdFolha });
+
+                // Parâmetro de saída — por último, como declarado na procedure
+                MySqlParameter outputParam = new MySqlParameter("p_sequence_folha", MySqlDbType.Int32);
+                outputParam.Direction = ParameterDirection.Output;
+                command.Parameters.Add(outputParam);
+
+                command.ExecuteNonQuery();
+
+                ultimoId = Convert.ToInt32(outputParam.Value);
+                conexao.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao copiar folha: {ex.Message}", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conexao.Close();
+                ultimoId = -1;
+                return false;
+            }
+        }
+
+        public bool excluiFolha()
+        {
+            // Essa exclusão é lógica, então o ID do comentário deve ser válido para marcar como excluído
+            // Validação de entrada
+            if (IdFolha <= 0)
+            {
+                MessageBox.Show("ID da folha inválido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            try
+            {
+                if (!conectaBanco())
+                {
+                    MessageBox.Show("Erro ao conectar ao banco de dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                using (var command = new MySqlCommand())
+                {
+                    command.Connection = conexao;
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.CommandText = "pr_excluifolha";
+
+                    command.Parameters.AddWithValue("pIdFolha", IdFolha);
+
+                    bool sucesso = command.ExecuteNonQuery() > 0;
+                    conexao.Close();
+                    return sucesso;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao excluir: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 conexao?.Close();
                 return false;
             }
