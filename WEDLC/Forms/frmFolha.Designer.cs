@@ -116,11 +116,9 @@
             this.grpBoxDados.Controls.Add(this.lblNome);
             this.grpBoxDados.Controls.Add(this.txtCodigo);
             this.grpBoxDados.Controls.Add(this.lblCodigo);
-            this.grpBoxDados.Location = new System.Drawing.Point(16, 15);
-            this.grpBoxDados.Margin = new System.Windows.Forms.Padding(4);
+            this.grpBoxDados.Location = new System.Drawing.Point(12, 12);
             this.grpBoxDados.Name = "grpBoxDados";
-            this.grpBoxDados.Padding = new System.Windows.Forms.Padding(4);
-            this.grpBoxDados.Size = new System.Drawing.Size(1556, 298);
+            this.grpBoxDados.Size = new System.Drawing.Size(1167, 242);
             this.grpBoxDados.TabIndex = 0;
             this.grpBoxDados.TabStop = false;
             this.grpBoxDados.Text = "Dados da Folha";
@@ -130,10 +128,9 @@
             this.btnCopiarColar.Enabled = false;
             this.btnCopiarColar.Image = global::WEDLC.Properties.Resources.copiarcolar;
             this.btnCopiarColar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCopiarColar.Location = new System.Drawing.Point(1435, 38);
-            this.btnCopiarColar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCopiarColar.Location = new System.Drawing.Point(1076, 31);
             this.btnCopiarColar.Name = "btnCopiarColar";
-            this.btnCopiarColar.Size = new System.Drawing.Size(113, 33);
+            this.btnCopiarColar.Size = new System.Drawing.Size(85, 27);
             this.btnCopiarColar.TabIndex = 33;
             this.btnCopiarColar.Text = "Copiar";
             this.btnCopiarColar.UseVisualStyleBackColor = true;
@@ -142,31 +139,28 @@
             // grdDados
             // 
             this.grdDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDados.Location = new System.Drawing.Point(8, 75);
-            this.grdDados.Margin = new System.Windows.Forms.Padding(4);
+            this.grdDados.Location = new System.Drawing.Point(6, 61);
             this.grdDados.Name = "grdDados";
             this.grdDados.RowHeadersWidth = 51;
-            this.grdDados.Size = new System.Drawing.Size(1540, 207);
+            this.grdDados.Size = new System.Drawing.Size(1155, 168);
             this.grdDados.TabIndex = 6;
             this.grdDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDados_CellClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(891, 23);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(668, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 16);
+            this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tipo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1093, 23);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(820, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Grupo";
             // 
@@ -174,10 +168,9 @@
             // 
             this.cboGrupo.Enabled = false;
             this.cboGrupo.FormattingEnabled = true;
-            this.cboGrupo.Location = new System.Drawing.Point(1093, 43);
-            this.cboGrupo.Margin = new System.Windows.Forms.Padding(4);
+            this.cboGrupo.Location = new System.Drawing.Point(820, 35);
             this.cboGrupo.Name = "cboGrupo";
-            this.cboGrupo.Size = new System.Drawing.Size(185, 24);
+            this.cboGrupo.Size = new System.Drawing.Size(140, 21);
             this.cboGrupo.TabIndex = 5;
             this.cboGrupo.Validating += new System.ComponentModel.CancelEventHandler(this.cboGrupo_Validating);
             // 
@@ -185,61 +178,55 @@
             // 
             this.cboTipo.Enabled = false;
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(891, 43);
-            this.cboTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.cboTipo.Location = new System.Drawing.Point(668, 35);
             this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(193, 24);
+            this.cboTipo.Size = new System.Drawing.Size(146, 21);
             this.cboTipo.TabIndex = 4;
             this.cboTipo.Validating += new System.ComponentModel.CancelEventHandler(this.cboTipo_Validating);
             // 
             // txtSigla
             // 
-            this.txtSigla.Location = new System.Drawing.Point(153, 43);
-            this.txtSigla.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSigla.Location = new System.Drawing.Point(115, 35);
             this.txtSigla.MaxLength = 15;
             this.txtSigla.Name = "txtSigla";
-            this.txtSigla.Size = new System.Drawing.Size(232, 22);
+            this.txtSigla.Size = new System.Drawing.Size(175, 20);
             this.txtSigla.TabIndex = 2;
             this.txtSigla.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSigla_KeyUp);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(149, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(112, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Sigla";
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(393, 43);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNome.Location = new System.Drawing.Point(295, 35);
             this.txtNome.MaxLength = 60;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(489, 22);
+            this.txtNome.Size = new System.Drawing.Size(368, 20);
             this.txtNome.TabIndex = 3;
             this.txtNome.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyUp);
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(389, 23);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNome.Location = new System.Drawing.Point(292, 19);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(44, 16);
+            this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
             // 
             // txtCodigo
             // 
             this.txtCodigo.ForeColor = System.Drawing.Color.Red;
-            this.txtCodigo.Location = new System.Drawing.Point(8, 43);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigo.Location = new System.Drawing.Point(6, 35);
             this.txtCodigo.MaxLength = 10;
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(136, 22);
+            this.txtCodigo.Size = new System.Drawing.Size(103, 20);
             this.txtCodigo.TabIndex = 1;
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             this.txtCodigo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCodigo_KeyUp);
@@ -247,10 +234,9 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(4, 23);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(3, 19);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(51, 16);
+            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
             // 
@@ -261,11 +247,9 @@
             this.grpBotoes.Controls.Add(this.btnGravar);
             this.grpBotoes.Controls.Add(this.btnSair);
             this.grpBotoes.Controls.Add(this.btnNovo);
-            this.grpBotoes.Location = new System.Drawing.Point(15, 320);
-            this.grpBotoes.Margin = new System.Windows.Forms.Padding(4);
+            this.grpBotoes.Location = new System.Drawing.Point(11, 260);
             this.grpBotoes.Name = "grpBotoes";
-            this.grpBotoes.Padding = new System.Windows.Forms.Padding(4);
-            this.grpBotoes.Size = new System.Drawing.Size(1557, 57);
+            this.grpBotoes.Size = new System.Drawing.Size(1168, 46);
             this.grpBotoes.TabIndex = 1;
             this.grpBotoes.TabStop = false;
             // 
@@ -274,10 +258,9 @@
             this.btnCancelar.Enabled = false;
             this.btnCancelar.Image = global::WEDLC.Properties.Resources.cancelblue;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(376, 16);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(282, 13);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(113, 33);
+            this.btnCancelar.Size = new System.Drawing.Size(85, 27);
             this.btnCancelar.TabIndex = 31;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -288,10 +271,9 @@
             this.btnExcluir.Enabled = false;
             this.btnExcluir.Image = global::WEDLC.Properties.Resources.trash;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(133, 16);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluir.Location = new System.Drawing.Point(100, 13);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(113, 33);
+            this.btnExcluir.Size = new System.Drawing.Size(85, 27);
             this.btnExcluir.TabIndex = 29;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -302,10 +284,9 @@
             this.btnGravar.Enabled = false;
             this.btnGravar.Image = global::WEDLC.Properties.Resources.save;
             this.btnGravar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGravar.Location = new System.Drawing.Point(255, 16);
-            this.btnGravar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGravar.Location = new System.Drawing.Point(191, 13);
             this.btnGravar.Name = "btnGravar";
-            this.btnGravar.Size = new System.Drawing.Size(113, 33);
+            this.btnGravar.Size = new System.Drawing.Size(85, 27);
             this.btnGravar.TabIndex = 30;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
@@ -315,10 +296,9 @@
             // 
             this.btnSair.Image = global::WEDLC.Properties.Resources.exit;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(1436, 16);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSair.Location = new System.Drawing.Point(1077, 13);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(113, 33);
+            this.btnSair.Size = new System.Drawing.Size(85, 27);
             this.btnSair.TabIndex = 32;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -328,10 +308,9 @@
             // 
             this.btnNovo.Image = global::WEDLC.Properties.Resources.add;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovo.Location = new System.Drawing.Point(12, 16);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNovo.Location = new System.Drawing.Point(9, 13);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(113, 33);
+            this.btnNovo.Size = new System.Drawing.Size(85, 27);
             this.btnNovo.TabIndex = 27;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
@@ -345,11 +324,9 @@
             this.grpComplemento.Controls.Add(this.grpAvaliacaoMuscular);
             this.grpComplemento.Controls.Add(this.grpEstudoPotenEvocado);
             this.grpComplemento.Enabled = false;
-            this.grpComplemento.Location = new System.Drawing.Point(16, 422);
-            this.grpComplemento.Margin = new System.Windows.Forms.Padding(4);
+            this.grpComplemento.Location = new System.Drawing.Point(12, 343);
             this.grpComplemento.Name = "grpComplemento";
-            this.grpComplemento.Padding = new System.Windows.Forms.Padding(4);
-            this.grpComplemento.Size = new System.Drawing.Size(1556, 378);
+            this.grpComplemento.Size = new System.Drawing.Size(1167, 307);
             this.grpComplemento.TabIndex = 10;
             this.grpComplemento.TabStop = false;
             this.grpComplemento.Text = "Complemento";
@@ -361,11 +338,9 @@
             this.grpTestesEspeciais.Controls.Add(this.groupBox7);
             this.grpTestesEspeciais.Controls.Add(this.groupBox6);
             this.grpTestesEspeciais.Enabled = false;
-            this.grpTestesEspeciais.Location = new System.Drawing.Point(13, 272);
-            this.grpTestesEspeciais.Margin = new System.Windows.Forms.Padding(4);
+            this.grpTestesEspeciais.Location = new System.Drawing.Point(10, 221);
             this.grpTestesEspeciais.Name = "grpTestesEspeciais";
-            this.grpTestesEspeciais.Padding = new System.Windows.Forms.Padding(4);
-            this.grpTestesEspeciais.Size = new System.Drawing.Size(1528, 94);
+            this.grpTestesEspeciais.Size = new System.Drawing.Size(1146, 76);
             this.grpTestesEspeciais.TabIndex = 14;
             this.grpTestesEspeciais.TabStop = false;
             this.grpTestesEspeciais.Text = "Testes Especiais";
@@ -373,11 +348,9 @@
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.cboSimNaoNSPD);
-            this.groupBox9.Location = new System.Drawing.Point(1152, 23);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox9.Location = new System.Drawing.Point(864, 19);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox9.Size = new System.Drawing.Size(363, 55);
+            this.groupBox9.Size = new System.Drawing.Size(272, 45);
             this.groupBox9.TabIndex = 4;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "NSPD";
@@ -385,21 +358,18 @@
             // cboSimNaoNSPD
             // 
             this.cboSimNaoNSPD.FormattingEnabled = true;
-            this.cboSimNaoNSPD.Location = new System.Drawing.Point(8, 22);
-            this.cboSimNaoNSPD.Margin = new System.Windows.Forms.Padding(4);
+            this.cboSimNaoNSPD.Location = new System.Drawing.Point(6, 18);
             this.cboSimNaoNSPD.Name = "cboSimNaoNSPD";
-            this.cboSimNaoNSPD.Size = new System.Drawing.Size(267, 24);
+            this.cboSimNaoNSPD.Size = new System.Drawing.Size(201, 21);
             this.cboSimNaoNSPD.TabIndex = 26;
             this.cboSimNaoNSPD.SelectedIndexChanged += new System.EventHandler(this.cboSimNaoNSPD_SelectedIndexChanged);
             // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.cboSimNaoReflexo);
-            this.groupBox8.Location = new System.Drawing.Point(780, 23);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox8.Location = new System.Drawing.Point(585, 19);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox8.Size = new System.Drawing.Size(352, 55);
+            this.groupBox8.Size = new System.Drawing.Size(264, 45);
             this.groupBox8.TabIndex = 3;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Reflexo H";
@@ -407,21 +377,18 @@
             // cboSimNaoReflexo
             // 
             this.cboSimNaoReflexo.FormattingEnabled = true;
-            this.cboSimNaoReflexo.Location = new System.Drawing.Point(8, 22);
-            this.cboSimNaoReflexo.Margin = new System.Windows.Forms.Padding(4);
+            this.cboSimNaoReflexo.Location = new System.Drawing.Point(6, 18);
             this.cboSimNaoReflexo.Name = "cboSimNaoReflexo";
-            this.cboSimNaoReflexo.Size = new System.Drawing.Size(255, 24);
+            this.cboSimNaoReflexo.Size = new System.Drawing.Size(192, 21);
             this.cboSimNaoReflexo.TabIndex = 25;
             this.cboSimNaoReflexo.SelectedIndexChanged += new System.EventHandler(this.cboSimNaoReflexo_SelectedIndexChanged);
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.cboSimNaoRBC);
-            this.groupBox7.Location = new System.Drawing.Point(396, 23);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Location = new System.Drawing.Point(297, 19);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(352, 55);
+            this.groupBox7.Size = new System.Drawing.Size(264, 45);
             this.groupBox7.TabIndex = 2;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "RBC";
@@ -429,21 +396,18 @@
             // cboSimNaoRBC
             // 
             this.cboSimNaoRBC.FormattingEnabled = true;
-            this.cboSimNaoRBC.Location = new System.Drawing.Point(8, 22);
-            this.cboSimNaoRBC.Margin = new System.Windows.Forms.Padding(4);
+            this.cboSimNaoRBC.Location = new System.Drawing.Point(6, 18);
             this.cboSimNaoRBC.Name = "cboSimNaoRBC";
-            this.cboSimNaoRBC.Size = new System.Drawing.Size(255, 24);
+            this.cboSimNaoRBC.Size = new System.Drawing.Size(192, 21);
             this.cboSimNaoRBC.TabIndex = 24;
             this.cboSimNaoRBC.SelectedIndexChanged += new System.EventHandler(this.cboSimNaoRBC_SelectedIndexChanged);
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.cboSimNaoBlink);
-            this.groupBox6.Location = new System.Drawing.Point(12, 23);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Location = new System.Drawing.Point(9, 19);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(352, 55);
+            this.groupBox6.Size = new System.Drawing.Size(264, 45);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Blink Reflex";
@@ -451,10 +415,9 @@
             // cboSimNaoBlink
             // 
             this.cboSimNaoBlink.FormattingEnabled = true;
-            this.cboSimNaoBlink.Location = new System.Drawing.Point(8, 23);
-            this.cboSimNaoBlink.Margin = new System.Windows.Forms.Padding(4);
+            this.cboSimNaoBlink.Location = new System.Drawing.Point(6, 19);
             this.cboSimNaoBlink.Name = "cboSimNaoBlink";
-            this.cboSimNaoBlink.Size = new System.Drawing.Size(255, 24);
+            this.cboSimNaoBlink.Size = new System.Drawing.Size(192, 21);
             this.cboSimNaoBlink.TabIndex = 23;
             this.cboSimNaoBlink.SelectedIndexChanged += new System.EventHandler(this.cboSimNaoBlink_SelectedIndexChanged);
             // 
@@ -466,11 +429,9 @@
             this.grpNeuroCondSensorial.Controls.Add(this.label7);
             this.grpNeuroCondSensorial.Controls.Add(this.grdNeuroCondSensorial);
             this.grpNeuroCondSensorial.Enabled = false;
-            this.grpNeuroCondSensorial.Location = new System.Drawing.Point(781, 26);
-            this.grpNeuroCondSensorial.Margin = new System.Windows.Forms.Padding(4);
+            this.grpNeuroCondSensorial.Location = new System.Drawing.Point(586, 21);
             this.grpNeuroCondSensorial.Name = "grpNeuroCondSensorial";
-            this.grpNeuroCondSensorial.Padding = new System.Windows.Forms.Padding(4);
-            this.grpNeuroCondSensorial.Size = new System.Drawing.Size(376, 239);
+            this.grpNeuroCondSensorial.Size = new System.Drawing.Size(282, 194);
             this.grpNeuroCondSensorial.TabIndex = 13;
             this.grpNeuroCondSensorial.TabStop = false;
             this.grpNeuroCondSensorial.Text = "Neuro Condução Sensorial";
@@ -478,19 +439,17 @@
             // cboNeuroConducaoSensorial
             // 
             this.cboNeuroConducaoSensorial.FormattingEnabled = true;
-            this.cboNeuroConducaoSensorial.Location = new System.Drawing.Point(12, 47);
-            this.cboNeuroConducaoSensorial.Margin = new System.Windows.Forms.Padding(4);
+            this.cboNeuroConducaoSensorial.Location = new System.Drawing.Point(9, 38);
             this.cboNeuroConducaoSensorial.Name = "cboNeuroConducaoSensorial";
-            this.cboNeuroConducaoSensorial.Size = new System.Drawing.Size(263, 24);
+            this.cboNeuroConducaoSensorial.Size = new System.Drawing.Size(198, 21);
             this.cboNeuroConducaoSensorial.TabIndex = 15;
             // 
             // btnExcluiNeuroCondSensorial
             // 
             this.btnExcluiNeuroCondSensorial.Image = global::WEDLC.Properties.Resources.up;
-            this.btnExcluiNeuroCondSensorial.Location = new System.Drawing.Point(328, 47);
-            this.btnExcluiNeuroCondSensorial.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluiNeuroCondSensorial.Location = new System.Drawing.Point(246, 38);
             this.btnExcluiNeuroCondSensorial.Name = "btnExcluiNeuroCondSensorial";
-            this.btnExcluiNeuroCondSensorial.Size = new System.Drawing.Size(36, 30);
+            this.btnExcluiNeuroCondSensorial.Size = new System.Drawing.Size(27, 24);
             this.btnExcluiNeuroCondSensorial.TabIndex = 17;
             this.btnExcluiNeuroCondSensorial.UseVisualStyleBackColor = true;
             this.btnExcluiNeuroCondSensorial.Click += new System.EventHandler(this.btnExcluiNeuroCondSensorial_Click);
@@ -498,10 +457,9 @@
             // btnIncluiNeuroCondSensorial
             // 
             this.btnIncluiNeuroCondSensorial.Image = global::WEDLC.Properties.Resources.down;
-            this.btnIncluiNeuroCondSensorial.Location = new System.Drawing.Point(284, 47);
-            this.btnIncluiNeuroCondSensorial.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIncluiNeuroCondSensorial.Location = new System.Drawing.Point(213, 38);
             this.btnIncluiNeuroCondSensorial.Name = "btnIncluiNeuroCondSensorial";
-            this.btnIncluiNeuroCondSensorial.Size = new System.Drawing.Size(36, 30);
+            this.btnIncluiNeuroCondSensorial.Size = new System.Drawing.Size(27, 24);
             this.btnIncluiNeuroCondSensorial.TabIndex = 16;
             this.btnIncluiNeuroCondSensorial.UseVisualStyleBackColor = true;
             this.btnIncluiNeuroCondSensorial.Click += new System.EventHandler(this.btnIncluiNeuroCondSensorial_Click);
@@ -509,21 +467,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 30);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(6, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 16);
+            this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "Código";
             // 
             // grdNeuroCondSensorial
             // 
             this.grdNeuroCondSensorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdNeuroCondSensorial.Location = new System.Drawing.Point(12, 84);
-            this.grdNeuroCondSensorial.Margin = new System.Windows.Forms.Padding(4);
+            this.grdNeuroCondSensorial.Location = new System.Drawing.Point(9, 68);
             this.grdNeuroCondSensorial.Name = "grdNeuroCondSensorial";
             this.grdNeuroCondSensorial.RowHeadersWidth = 51;
-            this.grdNeuroCondSensorial.Size = new System.Drawing.Size(352, 137);
+            this.grdNeuroCondSensorial.Size = new System.Drawing.Size(264, 111);
             this.grdNeuroCondSensorial.TabIndex = 18;
             // 
             // grpNeuroCondMotora
@@ -534,11 +490,9 @@
             this.grpNeuroCondMotora.Controls.Add(this.label6);
             this.grpNeuroCondMotora.Controls.Add(this.grdNeuroCondMotora);
             this.grpNeuroCondMotora.Enabled = false;
-            this.grpNeuroCondMotora.Location = new System.Drawing.Point(397, 26);
-            this.grpNeuroCondMotora.Margin = new System.Windows.Forms.Padding(4);
+            this.grpNeuroCondMotora.Location = new System.Drawing.Point(298, 21);
             this.grpNeuroCondMotora.Name = "grpNeuroCondMotora";
-            this.grpNeuroCondMotora.Padding = new System.Windows.Forms.Padding(4);
-            this.grpNeuroCondMotora.Size = new System.Drawing.Size(376, 239);
+            this.grpNeuroCondMotora.Size = new System.Drawing.Size(282, 194);
             this.grpNeuroCondMotora.TabIndex = 12;
             this.grpNeuroCondMotora.TabStop = false;
             this.grpNeuroCondMotora.Text = "Neuro Condução Motora";
@@ -546,19 +500,17 @@
             // cboNeuroConducaoMotora
             // 
             this.cboNeuroConducaoMotora.FormattingEnabled = true;
-            this.cboNeuroConducaoMotora.Location = new System.Drawing.Point(12, 47);
-            this.cboNeuroConducaoMotora.Margin = new System.Windows.Forms.Padding(4);
+            this.cboNeuroConducaoMotora.Location = new System.Drawing.Point(9, 38);
             this.cboNeuroConducaoMotora.Name = "cboNeuroConducaoMotora";
-            this.cboNeuroConducaoMotora.Size = new System.Drawing.Size(263, 24);
+            this.cboNeuroConducaoMotora.Size = new System.Drawing.Size(198, 21);
             this.cboNeuroConducaoMotora.TabIndex = 11;
             // 
             // btnExcluiNeuroCondMotora
             // 
             this.btnExcluiNeuroCondMotora.Image = global::WEDLC.Properties.Resources.up;
-            this.btnExcluiNeuroCondMotora.Location = new System.Drawing.Point(328, 47);
-            this.btnExcluiNeuroCondMotora.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluiNeuroCondMotora.Location = new System.Drawing.Point(246, 38);
             this.btnExcluiNeuroCondMotora.Name = "btnExcluiNeuroCondMotora";
-            this.btnExcluiNeuroCondMotora.Size = new System.Drawing.Size(36, 30);
+            this.btnExcluiNeuroCondMotora.Size = new System.Drawing.Size(27, 24);
             this.btnExcluiNeuroCondMotora.TabIndex = 13;
             this.btnExcluiNeuroCondMotora.UseVisualStyleBackColor = true;
             this.btnExcluiNeuroCondMotora.Click += new System.EventHandler(this.btnExcluiNeuroCondMotora_Click);
@@ -566,10 +518,9 @@
             // btnIncluiNeuroCondMotora
             // 
             this.btnIncluiNeuroCondMotora.Image = global::WEDLC.Properties.Resources.down;
-            this.btnIncluiNeuroCondMotora.Location = new System.Drawing.Point(284, 47);
-            this.btnIncluiNeuroCondMotora.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIncluiNeuroCondMotora.Location = new System.Drawing.Point(213, 38);
             this.btnIncluiNeuroCondMotora.Name = "btnIncluiNeuroCondMotora";
-            this.btnIncluiNeuroCondMotora.Size = new System.Drawing.Size(36, 30);
+            this.btnIncluiNeuroCondMotora.Size = new System.Drawing.Size(27, 24);
             this.btnIncluiNeuroCondMotora.TabIndex = 12;
             this.btnIncluiNeuroCondMotora.UseVisualStyleBackColor = true;
             this.btnIncluiNeuroCondMotora.Click += new System.EventHandler(this.btnIncluiNeuroCondMotora_Click);
@@ -577,21 +528,19 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 30);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(6, 24);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 16);
+            this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "Código";
             // 
             // grdNeuroCondMotora
             // 
             this.grdNeuroCondMotora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdNeuroCondMotora.Location = new System.Drawing.Point(12, 84);
-            this.grdNeuroCondMotora.Margin = new System.Windows.Forms.Padding(4);
+            this.grdNeuroCondMotora.Location = new System.Drawing.Point(9, 68);
             this.grdNeuroCondMotora.Name = "grdNeuroCondMotora";
             this.grdNeuroCondMotora.RowHeadersWidth = 51;
-            this.grdNeuroCondMotora.Size = new System.Drawing.Size(352, 137);
+            this.grdNeuroCondMotora.Size = new System.Drawing.Size(264, 111);
             this.grdNeuroCondMotora.TabIndex = 14;
             // 
             // grpAvaliacaoMuscular
@@ -602,11 +551,9 @@
             this.grpAvaliacaoMuscular.Controls.Add(this.label4);
             this.grpAvaliacaoMuscular.Controls.Add(this.grdAvaliacaoMuscular);
             this.grpAvaliacaoMuscular.Enabled = false;
-            this.grpAvaliacaoMuscular.Location = new System.Drawing.Point(13, 26);
-            this.grpAvaliacaoMuscular.Margin = new System.Windows.Forms.Padding(4);
+            this.grpAvaliacaoMuscular.Location = new System.Drawing.Point(10, 21);
             this.grpAvaliacaoMuscular.Name = "grpAvaliacaoMuscular";
-            this.grpAvaliacaoMuscular.Padding = new System.Windows.Forms.Padding(4);
-            this.grpAvaliacaoMuscular.Size = new System.Drawing.Size(376, 239);
+            this.grpAvaliacaoMuscular.Size = new System.Drawing.Size(282, 194);
             this.grpAvaliacaoMuscular.TabIndex = 11;
             this.grpAvaliacaoMuscular.TabStop = false;
             this.grpAvaliacaoMuscular.Text = "Avaliação Muscular";
@@ -614,19 +561,17 @@
             // cboAvaliacaoMuscular
             // 
             this.cboAvaliacaoMuscular.FormattingEnabled = true;
-            this.cboAvaliacaoMuscular.Location = new System.Drawing.Point(12, 47);
-            this.cboAvaliacaoMuscular.Margin = new System.Windows.Forms.Padding(4);
+            this.cboAvaliacaoMuscular.Location = new System.Drawing.Point(9, 38);
             this.cboAvaliacaoMuscular.Name = "cboAvaliacaoMuscular";
-            this.cboAvaliacaoMuscular.Size = new System.Drawing.Size(263, 24);
+            this.cboAvaliacaoMuscular.Size = new System.Drawing.Size(198, 21);
             this.cboAvaliacaoMuscular.TabIndex = 7;
             // 
             // btnExcluiAvaliacaoMuscular
             // 
             this.btnExcluiAvaliacaoMuscular.Image = global::WEDLC.Properties.Resources.up;
-            this.btnExcluiAvaliacaoMuscular.Location = new System.Drawing.Point(328, 47);
-            this.btnExcluiAvaliacaoMuscular.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluiAvaliacaoMuscular.Location = new System.Drawing.Point(246, 38);
             this.btnExcluiAvaliacaoMuscular.Name = "btnExcluiAvaliacaoMuscular";
-            this.btnExcluiAvaliacaoMuscular.Size = new System.Drawing.Size(36, 30);
+            this.btnExcluiAvaliacaoMuscular.Size = new System.Drawing.Size(27, 24);
             this.btnExcluiAvaliacaoMuscular.TabIndex = 9;
             this.btnExcluiAvaliacaoMuscular.UseVisualStyleBackColor = true;
             this.btnExcluiAvaliacaoMuscular.Click += new System.EventHandler(this.btnExcluiAvaliacaoMuscular_Click);
@@ -634,10 +579,9 @@
             // btnIncluiAvaliacaoMuscular
             // 
             this.btnIncluiAvaliacaoMuscular.Image = global::WEDLC.Properties.Resources.down;
-            this.btnIncluiAvaliacaoMuscular.Location = new System.Drawing.Point(284, 47);
-            this.btnIncluiAvaliacaoMuscular.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIncluiAvaliacaoMuscular.Location = new System.Drawing.Point(213, 38);
             this.btnIncluiAvaliacaoMuscular.Name = "btnIncluiAvaliacaoMuscular";
-            this.btnIncluiAvaliacaoMuscular.Size = new System.Drawing.Size(36, 30);
+            this.btnIncluiAvaliacaoMuscular.Size = new System.Drawing.Size(27, 24);
             this.btnIncluiAvaliacaoMuscular.TabIndex = 8;
             this.btnIncluiAvaliacaoMuscular.UseVisualStyleBackColor = true;
             this.btnIncluiAvaliacaoMuscular.Click += new System.EventHandler(this.btnIncluiAvaliacaoMuscular_Click);
@@ -645,21 +589,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 30);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(6, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Código";
             // 
             // grdAvaliacaoMuscular
             // 
             this.grdAvaliacaoMuscular.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdAvaliacaoMuscular.Location = new System.Drawing.Point(12, 84);
-            this.grdAvaliacaoMuscular.Margin = new System.Windows.Forms.Padding(4);
+            this.grdAvaliacaoMuscular.Location = new System.Drawing.Point(9, 68);
             this.grdAvaliacaoMuscular.Name = "grdAvaliacaoMuscular";
             this.grdAvaliacaoMuscular.RowHeadersWidth = 51;
-            this.grdAvaliacaoMuscular.Size = new System.Drawing.Size(352, 137);
+            this.grdAvaliacaoMuscular.Size = new System.Drawing.Size(264, 111);
             this.grdAvaliacaoMuscular.TabIndex = 10;
             // 
             // grpEstudoPotenEvocado
@@ -670,11 +612,9 @@
             this.grpEstudoPotenEvocado.Controls.Add(this.label5);
             this.grpEstudoPotenEvocado.Controls.Add(this.grdEstudoPotencial);
             this.grpEstudoPotenEvocado.Enabled = false;
-            this.grpEstudoPotenEvocado.Location = new System.Drawing.Point(1165, 26);
-            this.grpEstudoPotenEvocado.Margin = new System.Windows.Forms.Padding(4);
+            this.grpEstudoPotenEvocado.Location = new System.Drawing.Point(874, 21);
             this.grpEstudoPotenEvocado.Name = "grpEstudoPotenEvocado";
-            this.grpEstudoPotenEvocado.Padding = new System.Windows.Forms.Padding(4);
-            this.grpEstudoPotenEvocado.Size = new System.Drawing.Size(376, 239);
+            this.grpEstudoPotenEvocado.Size = new System.Drawing.Size(282, 194);
             this.grpEstudoPotenEvocado.TabIndex = 10;
             this.grpEstudoPotenEvocado.TabStop = false;
             this.grpEstudoPotenEvocado.Text = "Estudo de Potenciais Evocados";
@@ -682,10 +622,9 @@
             // btnExcluiEstudoPotencial
             // 
             this.btnExcluiEstudoPotencial.Image = global::WEDLC.Properties.Resources.delete;
-            this.btnExcluiEstudoPotencial.Location = new System.Drawing.Point(328, 47);
-            this.btnExcluiEstudoPotencial.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExcluiEstudoPotencial.Location = new System.Drawing.Point(246, 38);
             this.btnExcluiEstudoPotencial.Name = "btnExcluiEstudoPotencial";
-            this.btnExcluiEstudoPotencial.Size = new System.Drawing.Size(36, 30);
+            this.btnExcluiEstudoPotencial.Size = new System.Drawing.Size(27, 24);
             this.btnExcluiEstudoPotencial.TabIndex = 21;
             this.btnExcluiEstudoPotencial.UseVisualStyleBackColor = true;
             this.btnExcluiEstudoPotencial.Click += new System.EventHandler(this.btnExcluiEstudoPotencial_Click);
@@ -693,41 +632,37 @@
             // btnIncluiEstudoPotencial
             // 
             this.btnIncluiEstudoPotencial.Image = global::WEDLC.Properties.Resources.down;
-            this.btnIncluiEstudoPotencial.Location = new System.Drawing.Point(284, 47);
-            this.btnIncluiEstudoPotencial.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIncluiEstudoPotencial.Location = new System.Drawing.Point(213, 38);
             this.btnIncluiEstudoPotencial.Name = "btnIncluiEstudoPotencial";
-            this.btnIncluiEstudoPotencial.Size = new System.Drawing.Size(36, 30);
+            this.btnIncluiEstudoPotencial.Size = new System.Drawing.Size(27, 24);
             this.btnIncluiEstudoPotencial.TabIndex = 20;
             this.btnIncluiEstudoPotencial.UseVisualStyleBackColor = true;
             this.btnIncluiEstudoPotencial.Click += new System.EventHandler(this.btnIncluiEstudoPotencial_Click);
             // 
             // txtEstudoPotencial
             // 
-            this.txtEstudoPotencial.Location = new System.Drawing.Point(12, 49);
-            this.txtEstudoPotencial.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEstudoPotencial.Location = new System.Drawing.Point(9, 40);
             this.txtEstudoPotencial.MaxLength = 30;
             this.txtEstudoPotencial.Name = "txtEstudoPotencial";
-            this.txtEstudoPotencial.Size = new System.Drawing.Size(263, 22);
+            this.txtEstudoPotencial.Size = new System.Drawing.Size(198, 20);
             this.txtEstudoPotencial.TabIndex = 19;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 30);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(6, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 16);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Código";
             // 
             // grdEstudoPotencial
             // 
             this.grdEstudoPotencial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEstudoPotencial.Location = new System.Drawing.Point(12, 84);
-            this.grdEstudoPotencial.Margin = new System.Windows.Forms.Padding(4);
+            this.grdEstudoPotencial.Location = new System.Drawing.Point(9, 68);
             this.grdEstudoPotencial.Name = "grdEstudoPotencial";
             this.grdEstudoPotencial.RowHeadersWidth = 51;
-            this.grdEstudoPotencial.Size = new System.Drawing.Size(352, 137);
+            this.grdEstudoPotencial.Size = new System.Drawing.Size(264, 111);
             this.grdEstudoPotencial.TabIndex = 22;
             // 
             // txtAguarde
@@ -737,12 +672,11 @@
             this.txtAguarde.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAguarde.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAguarde.ForeColor = System.Drawing.Color.Blue;
-            this.txtAguarde.Location = new System.Drawing.Point(581, 384);
-            this.txtAguarde.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAguarde.Location = new System.Drawing.Point(436, 312);
             this.txtAguarde.MaxLength = 4000;
             this.txtAguarde.Multiline = true;
             this.txtAguarde.Name = "txtAguarde";
-            this.txtAguarde.Size = new System.Drawing.Size(424, 30);
+            this.txtAguarde.Size = new System.Drawing.Size(318, 24);
             this.txtAguarde.TabIndex = 25;
             this.txtAguarde.Text = "Processando...";
             this.txtAguarde.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -752,19 +686,18 @@
             // 
             this.btnComplemento.Enabled = false;
             this.btnComplemento.Image = global::WEDLC.Properties.Resources.add1;
-            this.btnComplemento.Location = new System.Drawing.Point(19, 385);
-            this.btnComplemento.Margin = new System.Windows.Forms.Padding(4);
+            this.btnComplemento.Location = new System.Drawing.Point(14, 313);
             this.btnComplemento.Name = "btnComplemento";
-            this.btnComplemento.Size = new System.Drawing.Size(36, 30);
+            this.btnComplemento.Size = new System.Drawing.Size(27, 24);
             this.btnComplemento.TabIndex = 13;
             this.btnComplemento.UseVisualStyleBackColor = true;
             this.btnComplemento.Click += new System.EventHandler(this.btnComplemento_Click);
             // 
             // frmFolha
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1588, 814);
+            this.ClientSize = new System.Drawing.Size(1191, 661);
             this.ControlBox = false;
             this.Controls.Add(this.txtAguarde);
             this.Controls.Add(this.btnComplemento);
@@ -773,7 +706,6 @@
             this.Controls.Add(this.grpComplemento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmFolha";

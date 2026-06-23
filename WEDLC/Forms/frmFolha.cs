@@ -39,6 +39,7 @@ namespace WEDLC.Forms
             InitializeComponent();
             zoomHelper = new FormZoomHelper(this); // Inicializa o helper de zoom
             this.FormClosed += (s, e) => zoomHelper.Dispose(); // Descarta automaticamente quando o form for fechado
+            this.MinimumSize = new Size(1207, 700); // Define um tamanho mínimo para o formulário
             this.DoubleBuffered = true;
         }
 
