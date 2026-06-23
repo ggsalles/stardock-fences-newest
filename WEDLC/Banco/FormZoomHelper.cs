@@ -119,8 +119,8 @@ namespace WinFormsZoom
             }
         }
 
-        public void ZoomIn() => SetTargetZoom(ZoomFactor + 0.05f);
-        public void ZoomOut() => SetTargetZoom(ZoomFactor - 0.05f);
+        public void ZoomIn() => SetTargetZoom(ZoomFactor + 0.01f);
+        public void ZoomOut() => SetTargetZoom(ZoomFactor - 0.01f);
         public void ResetZoom() => SetTargetZoom(1.0f);
 
         private void SetTargetZoom(float newZoom)
