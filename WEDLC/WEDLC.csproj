@@ -534,6 +534,9 @@
     <EmbeddedResource Include="Forms\frmTrocaSenha.resx">
       <DependentUpon>frmTrocaSenha.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputBoxForm.resx">
+      <DependentUpon>InputBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\testecep.resx">
       <DependentUpon>testecep.cs</DependentUpon>
     </EmbeddedResource>
