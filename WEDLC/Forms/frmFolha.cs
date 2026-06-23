@@ -751,6 +751,7 @@ namespace WEDLC.Forms
         private void CarregaComboSimNao(System.Windows.Forms.ComboBox objCombo)
         {
             objCombo.BeginUpdate(); // Reduz flickering
+            objCombo.Items.Clear(); // Limpa itens existentes
             objCombo.DisplayMember = "Descricao";
             objCombo.ValueMember = "Id";
             objCombo.Items.Add(new cSimNao { IdSimNao = "1", Descricao = "Sim" });
@@ -1676,9 +1677,10 @@ namespace WEDLC.Forms
                     if (ultimoIdFolha > 0)
                     {
                         txtCodigo.Text = ultimoIdFolha.ToString();
-                        txtNome.Text = valor; // Atualiza o nome da folha com o valor digitado pelo usuário                   
+                        txtNome.Text = valor; // Atualiza o nome da folha com o valor digitado pelo usuário
+                        this.populaGridDados(0, 0, "", ""); 
                         grdDados.CurrentCell = null; //Desmarca a seleção do grid
-                        MessageBox.Show("Cópia efetuada com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Gerado a folha Nº " + ultimoIdFolha + ". Cópia efetuada com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                     else
