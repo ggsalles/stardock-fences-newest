@@ -1638,7 +1638,7 @@ namespace WEDLC.Forms
 
         private void btnCopiarColar_Click(object sender, EventArgs e)
         {
-
+            // permite clonar a folha, mas não permite alterar o nome da folha original, apenas o nome da nova folha copiada
             try
             {
                 //Verifica permissão de gravação
