@@ -30,7 +30,7 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.1.0.2")]
+[assembly: AssemblyFileVersion("1.1.0.3")]
 
 // Impressão Laudo: 1.0.0.0
 // 09/10/2025 - Bloco Velocidade Neuro 
@@ -50,4 +50,8 @@ using System.Runtime.InteropServices;
 
 // Ajuste Exclusão Comentários: 1.1.0.2
 // 01/06/2026 - Exclusão Lógica de Comentários 
+
+// Copia Folha Comentários: 1.1.0.3
+// 24/06/2026 - Cópia da Folha, Exclusão lógica da folha
+
 
